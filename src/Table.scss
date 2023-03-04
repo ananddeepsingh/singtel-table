@@ -1,0 +1,67 @@
+// @import './table-base';
+
+
+.selected-row {
+  background: #efedfd;
+}
+
+.singtel-table {
+  border-spacing: 0;
+  background: #fff;
+  margin: 5%;
+  border-radius: 16px;
+  box-shadow: 0 0 7px 0px #999;
+  width: 90%;
+
+  tr {
+    position: relative;
+
+    th {
+      font-weight: 600;
+      text-align: start;
+      background: #f7f7f7;
+
+      &:first-child {
+        border-start-start-radius: 16px;
+      }
+
+      &:last-child {
+        border-start-end-radius: 16px;
+      }
+    }
+  }
+
+  th,
+  td {
+    padding: 24px;
+    vertical-align: top;
+    border-bottom: 1px solid #e1e1e1;
+  }
+}
+
+.error-wrapper {
+  background-color: red;
+  color: #fff;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px auto 0;
+}
+
+@media only screen and (max-width: 768px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+
+  table {
+    background: red;
+  }
+
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+}
