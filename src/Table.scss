@@ -1,8 +1,60 @@
 // @import './table-base';
 
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
 
 .selected-row {
   background: #efedfd;
+}
+
+.singtel-table-cell p span {
+  &:first-child {
+    font-weight: bold;
+  }
+}
+
+.icon-direction {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #DEDAFA;
+  display: inline-block;
+  margin: 0 5px;
+  position: relative;
+  top: 4px;
+
+  &::after {
+    font-size: 20px;
+    color: #000;
+    position: absolute;
+    right: 5px;
+    top: -4px;
+  }
+}
+
+.ascending {
+  @extend .icon-direction;
+
+  &::after {
+    content: "\2193";
+  }
+}
+
+.descending {
+  @extend .icon-direction;
+
+  &::after {
+    content: "\2191";
+  }
 }
 
 .singtel-table {
@@ -20,6 +72,7 @@
       font-weight: 600;
       text-align: start;
       background: #f7f7f7;
+      cursor: pointer;
 
       &:first-child {
         border-start-start-radius: 16px;
@@ -46,22 +99,4 @@
   border-radius: 5px;
   padding: 5px;
   margin: 5px auto 0;
-}
-
-@media only screen and (max-width: 768px),
-(min-device-width: 768px) and (max-device-width: 1024px) {
-
-  table {
-    background: red;
-  }
-
-  /* Force table to not be like tables anymore */
-  table,
-  thead,
-  tbody,
-  th,
-  td,
-  tr {
-    display: block;
-  }
 }

@@ -1,2 +1,1 @@
-#Singtel Table Component
-
+# Singtel React Table Component
