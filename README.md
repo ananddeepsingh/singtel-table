@@ -2,7 +2,7 @@
 
 This is custom table
 
-## if need to show checkbox then use below snippet
+if need to show checkbox then use below snippet
 
 ```
 <SingtelTable
@@ -12,7 +12,7 @@ This is custom table
     />
 ```
 
-## if need to show checkbox then use below snippet
+if need to show radiobutton then use below snippet
 
 ```
 <SingtelTable
@@ -22,7 +22,7 @@ This is custom table
     />
 ```
 
-## if both option will be true so it will give an error
+if both option will be true so it will give an error
 
 ```
 <SingtelTable
